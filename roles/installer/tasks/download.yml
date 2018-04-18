@@ -1,0 +1,3 @@
+---
+- name: Download {{app_name_pretty}}
+  get_url: url={{app_url}} dest={{downloads}}/{{app_name}}.{{download_file_type}}

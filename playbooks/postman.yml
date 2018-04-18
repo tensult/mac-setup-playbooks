@@ -1,0 +1,18 @@
+---
+- hosts: local
+  become: yes
+  vars:
+    app_name: Postman
+    app_name_pretty: Postman
+    app_url: https://dl.pstmn.io/download/latest/osx
+    installer_type: app
+    download_file_type: zip
+    install_method: dmg
+    install_target: /Users/mathew
+    mount_path: /Volumes/Postman/
+  vars_files:
+      - ../setup-vars.yaml
+  roles:
+    - installer
+
+   

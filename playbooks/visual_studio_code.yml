@@ -1,0 +1,16 @@
+---
+- hosts: local
+  become: yes
+  vars:
+    app_name: Visual Studio Code
+    app_name_pretty: Visual Studio Code
+    app_url: https://go.microsoft.com/fwlink/?LinkID=620882
+    installer_type: app
+    install_method: dmg
+    download_file_type: zip
+    install_target: /Users/mathew
+    mount_path: /Volumes/Visual Studio Code
+  vars_files:
+    - ../setup-vars.yaml
+  roles:
+    - installer 

@@ -1,0 +1,18 @@
+---
+- hosts: local
+  become: yes
+  vars:
+    app_name: Slack
+    app_name_pretty: Slack
+    app_url: https://slack.com/ssb/download-osx
+    installer_type: app
+    download_file_type: dmg
+    install_method: dmg
+    install_target: /Users/mathew
+    mount_path: /Volumes/Slack.app/
+  vars_files:
+      - ../setup-vars.yaml
+  roles: 
+    - installer
+
+   

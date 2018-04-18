@@ -1,0 +1,12 @@
+---
+# tasks file for roles
+- include: download.yaml
+- include: zip.yaml
+  when: download_file_type == "zip"
+- include: rm_dup.yaml
+- include: dmg.yaml
+  when: installer_type == "app" and download_file_type == "dmg"
+- include: app.yaml
+  when: installer_type == "app" and ( download_file_type == "app" or download_file_type == "zip")
+- include: pkg.yaml
+  when: installer_type == "pkg"

@@ -1,0 +1,3 @@
+---
+- name: Copy {{downloads}}/{{app_name}}.app app to Applications directory
+  command: cp -R "{{downloads}}/{{app_name}}.app" /Applications

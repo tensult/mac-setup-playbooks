@@ -1,0 +1,12 @@
+---
+- hosts: local
+  name: Installing all required apps
+  vars_files:
+    - setup-vars.yaml
+  tasks:
+    - include: setup.yaml
+- import_playbook : playbooks/firefox.yaml
+- import_playbook : playbooks/postman.yaml
+- import_playbook : playbooks/google_chrome.yaml
+- import_playbook : playbooks/slack.yaml
+- import_playbook : playbooks/visual_studio_code.yaml

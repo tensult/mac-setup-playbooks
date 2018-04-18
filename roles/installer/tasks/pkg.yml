@@ -1,0 +1,4 @@
+---
+- name: Install {{app_name_pretty}} pkg 
+  command: sudo installer -package {{mount_path}}/{{app_name}}.pkg -target {{install_target}}
+
