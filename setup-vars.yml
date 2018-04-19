@@ -1,2 +1,3 @@
 ---
-downloads: ../.ansible-downloads/
+downloads: .ansible-downloads/
+mount_path: /Volumes

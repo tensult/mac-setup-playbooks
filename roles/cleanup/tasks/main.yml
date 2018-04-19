@@ -1,0 +1,4 @@
+---
+# tasks file for cleanup
+- name: Deleting downloads directory
+  file: path={{downloads}} state=absent

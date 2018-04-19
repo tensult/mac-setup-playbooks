@@ -1,12 +1,12 @@
 ---
 # tasks file for roles
-- include: download.yaml
-- include: zip.yaml
+- include: download.yml
+- include: unzip.yml
   when: download_file_type == "zip"
-- include: rm_dup.yaml
-- include: dmg.yaml
-  when: installer_type == "app" and download_file_type == "dmg"
-- include: app.yaml
-  when: installer_type == "app" and ( download_file_type == "app" or download_file_type == "zip")
-- include: pkg.yaml
-  when: installer_type == "pkg"
+- include: rm_dup.yml
+- include: mount.yml
+  when: download_file_type == "dmg"
+- include: app.yml
+  when: installer_type == "app"
+- include: unmount.yml
+  when: download_file_type == "dmg"

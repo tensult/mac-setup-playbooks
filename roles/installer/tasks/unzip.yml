@@ -1,0 +1,4 @@
+---
+- name: Unzipping {{app_name}}.zip
+  unarchive: src={{downloads}}/{{app_name}}.zip dest={{downloads}}/ copy=no
+  

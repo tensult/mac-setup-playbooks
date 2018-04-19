@@ -1,0 +1,6 @@
+---
+- name: Unmount {{app_name}} image
+  command: hdiutil detach "{{mount_path}}/{{app_name}}"
+- name: Changing installer source to {{downloads}}/{{app_name}}
+  set_fact: installer_source={{downloads}}
+  

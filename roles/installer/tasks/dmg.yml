@@ -1,8 +1,0 @@
----
-- name: Mount {{app_name_pretty}} image
-  command: hdiutil attach "{{app_name}}.dmg" chdir={{downloads}}
-- name: Copy {{mount_path}}/{{app_name}}.app to Applications directory
-  command: cp -R "{{mount_path}}/{{app_name}}.app" /Applications
-- name: Unmount {{app_name_pretty}} image
-  command: hdiutil detach "{{mount_path}}"
-  

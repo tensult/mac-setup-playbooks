@@ -3,13 +3,12 @@
   become: yes
   vars:
     app_name: Firefox
-    app_name_pretty: Firefox
     app_url: https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US
     installer_type: app
     install_method: dmg
     download_file_type: dmg
-    install_target: /Users/mathew
-    mount_path: /Volumes/Firefox/
   roles:
+    - setup
     - installer
+    - cleanup
    

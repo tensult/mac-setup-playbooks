@@ -1,0 +1,8 @@
+---
+# Keep Apps playbooks below
+- import_playbook : playbooks/firefox.yml
+- import_playbook : playbooks/postman.yml
+- import_playbook : playbooks/google_chrome.yml
+- import_playbook : playbooks/slack.yml
+- import_playbook : playbooks/visual_studio_code.yml
+# Keep Apps playbooks above

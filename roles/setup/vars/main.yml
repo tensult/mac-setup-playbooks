@@ -1,0 +1,4 @@
+---
+# vars file for roles/setup
+downloads: "{{ansible_env.HOME}}/.ansible-downloads"
+mount_path: /Volumes

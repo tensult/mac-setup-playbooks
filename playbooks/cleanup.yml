@@ -1,0 +1,6 @@
+---
+- hosts: local
+  vars_files:
+    - setup-vars.yml
+  roles: 
+    - cleanup

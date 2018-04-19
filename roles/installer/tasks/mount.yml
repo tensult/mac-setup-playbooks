@@ -1,0 +1,6 @@
+---
+- name: Mount {{app_name}} image
+  command: hdiutil attach "{{app_name}}.dmg" chdir={{downloads}} -mountpoint "{{mount_path}}/{{app_name}}"
+- name: Changing installer source to {{mount_path}}/{{app_name}}
+  set_fact: installer_source={{mount_path}}/{{app_name}}
+  
